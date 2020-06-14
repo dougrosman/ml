@@ -9,4 +9,4 @@ Guides, tips and resources for machine learning
 1. Select 'Troubleshoot'
 1. Select 'Advanced Options'
 1. Select 'Command Prompt'
-1. Type: `bootrec.exe /fixmbr`
+1. Type: ```bootrec.exe /fixmbr```
