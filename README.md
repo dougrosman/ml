@@ -22,3 +22,21 @@ Guides, tips and resources for machine learning
 4. Select keyboard layout
 5. Make sure **Normal Installation** is selected
 6. Check off **Download updates while installing Ubuntu** and **Install 3rd party software...**
+7. Select **Something else**
+8. Select the Free Space partition
+9. Press '+'
+   1.  Size: 100% the size of the partition
+   2.  **Logical** partition
+   3.  **Beginning of the space**
+   4.  Use as **Ext4 journaling file system**
+   5.  Mount point: **/** (root)
+10. Select Linux drive for the boot loader installation
+11. Select **Install Now**
+12. Credentials Example:
+    1.  Your name: ```ATS-401-03-ubuntu20.04```
+    2.  computer name: ```ats-401-03-ubuntu20.04```
+    3.  username: ```ats-401-03```
+    4.  password: ********
+13. Finish the installation
+
+## Installing dependencies for Stylegan2
