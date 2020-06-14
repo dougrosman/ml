@@ -39,4 +39,23 @@ Guides, tips and resources for machine learning
     4.  password: ********
 13. Finish the installation
 
+## Must-do things once Ubuntu is installed:
+1. re-boot
+2. Install Teamviewer and assign to account/set up passwords
+3. Make sure computer won't auto-suspend. Make sure you can log in with Teamviewer if computer logs out.
+
 ## Installing dependencies for Stylegan2
+#### Note: At this point, no restart is required for things to work. For the sake of time, you can move on to installing Ubuntu and Teamviewer on other machines
+1. Check **Software and Updates** to make sure latest Nvidia drivers are installed
+2. Open Terminal
+    ```
+    sudo apt update
+    sudo apt install build-essential
+    sudo apt install nvidia-cuda-toolkit
+    nvcc -V
+    ```
+3. [Download cuDNN Runtime Library for Ubuntu 18.04 (Deb)](https://developer.nvidia.com/rdp/cudnn-download) for Cuda 10.1
+    ```
+    cd Downloads
+    sudo dpkg -i ./libcudnn7_7.6.5.32-1+cuda10.1_amd64
+    ```
