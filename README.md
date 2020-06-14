@@ -45,7 +45,8 @@ Guides, tips and resources for machine learning
 3. Make sure computer won't auto-suspend. Make sure you can log in with Teamviewer if computer logs out.
 
 ## Installing dependencies for Stylegan2
-#### Note: At this point, no restart is required for things to work. For the sake of time, you can move on to installing Ubuntu and Teamviewer on other machines
+#### Watch: [StyleGAN2 on Ubuntu 20.04 - tutorial](https://www.youtube.com/watch?v=ZMQfHC3O7eY)
+#### Note: At this point, no restart is required for things to work. For the sake of time, you can move on to installing Ubuntu and Teamviewer on other machines, and install dependencies at any time by remote access through Teamviewer.
 1. Check **Software and Updates** to make sure latest Nvidia drivers are installed
 2. Open Terminal
     ```
@@ -57,5 +58,16 @@ Guides, tips and resources for machine learning
 3. [Download cuDNN Runtime Library for Ubuntu 18.04 (Deb)](https://developer.nvidia.com/rdp/cudnn-download) for Cuda 10.1
     ```
     cd Downloads
-    sudo dpkg -i ./libcudnn7_7.6.5.32-1+cuda10.1_amd64
+    sudo dpkg -i ./libcudnn7_7.6.5.32-1+cuda10.1_amd64.deb
+    ```
+4. [Download](https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh) and Install Anaconda with Python Version 3.7
+    ```
+    chmod +x ./Anaconda3-2020.02-Linux-x86_64.sh
+    ./Anaconda3-2020.02-Linux-x86_64.sh
+    ```
+5. Follow the command prompts (yes to everything, basically)
+6. Close and reopen Terminal
+7. Create a Conda virtual environment using the Anaconda Navigator
+    ```
+    anaconda-navigator
     ```
