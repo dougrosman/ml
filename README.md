@@ -71,3 +71,23 @@ Guides, tips and resources for machine learning
     ```
     anaconda-navigator
     ```
+8. Create a new environment called **stylegan2**
+9. Refresh the index for all + installed packages
+10. Add These packages/libraries. 
+    1.  Python 3.6
+    2. tensorflow-gpu version 1.15
+    3. pillow
+    4. requests
+11. Close the navigator
+    ```
+    conda activate stylegan2
+    ```
+12. ```cd``` into the StyleGAN2 folder
+13. Test your Cuda installation
+    ```
+    nvcc ...
+    ```
+14. Test to make sure it works by generating some images. You can generate images based on any of the pretrained models from the official NVLabs Google Drive, but this StyleGAN2 folder already has downloaded pretrained models (**FFHQ 1024x1024 config-f** and **FFHQ 512x512 config-f**)
+    ```
+    python run_generator.py generate_images network=./pretrained_models/...
+    ```
