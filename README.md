@@ -73,9 +73,9 @@ Guides, tips and resources for machine learning
     ```
 8. Create a new environment called **stylegan2**
 9. Refresh the index for all + installed packages
-10. Add These packages/libraries. 
-    1.  Python 3.6
-    2. tensorflow-gpu version 1.15
+10. Add These packages/libraries. To change any of the versions from the default, right-click on the check box next to the package name and change the version from there.
+    1. Python 3.6.10 (if anaconda doesn't allow you to pick 3.6 at first, select 3.7 for now, then change it to 3.6.10 from the installed packages index later.)
+    2. tensorflow-gpu version 1.15 (make sure)
     3. pillow
     4. requests
 11. Close the navigator
@@ -85,9 +85,14 @@ Guides, tips and resources for machine learning
 12. ```cd``` into the StyleGAN2 folder
 13. Test your Cuda installation
     ```
-    nvcc ...
+    nvcc test_nvcc.cu -o test_nvcc -run
     ```
-14. Test to make sure it works by generating some images. You can generate images based on any of the pretrained models from the official NVLabs Google Drive, but this StyleGAN2 folder already has downloaded pretrained models (**FFHQ 1024x1024 config-f** and **FFHQ 512x512 config-f**)
+14. I don't know what this does but you should do it.
+    ```
+    ln -s /usr/bin/ptxas ./bin/
+    ```
+15. There's a bug where some of the code in the original stylegan2 repo doesn't work with config-b through f
+16. Test to make sure it works by generating some images. You can generate images based on any of the pretrained models from the official NVLabs Google Drive, but this StyleGAN2 folder already has downloaded pretrained models (**FFHQ 1024x1024 config-f** and **FFHQ 512x512 config-f**)
     ```
     python run_generator.py generate_images network=./pretrained_models/...
     ```
