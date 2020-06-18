@@ -91,7 +91,11 @@ Guides, tips and resources for machine learning
     ```
     ln -s /usr/bin/ptxas ./bin/
     ```
-15. There's a bug where some of the code in the original stylegan2 repo doesn't work with config-b through f
+15. There's a bug where some of the code in the original stylegan2 repo doesn't work with config-b through f. Open up: `dnnlib/tflib/custom_ops.py` and change line 127 to:
+    ```
+    compile_opts += ' --compiler-options \'-fPIC -D_GLIBCXX_USE_CXX11_ABI=1 \''
+    ```
+    (essentially, you're just changing the ABI=0 to `ABI=1` at the end of the line)
 16. Test to make sure it works by generating some images. You can generate images based on any of the pretrained models from the official NVLabs Google Drive, but this StyleGAN2 folder already has downloaded pretrained models (**FFHQ 1024x1024 config-f** and **FFHQ 512x512 config-f**)
     ```
     python run_generator.py generate_images network=./pretrained_models/...
