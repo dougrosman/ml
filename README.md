@@ -98,5 +98,5 @@ Guides, tips and resources for machine learning
     (essentially, you're just changing the ABI=0 to `ABI=1` at the end of the line)
 16. Test to make sure it works by generating some images. You can generate images based on any of the pretrained models from the official NVLabs Google Drive, but this StyleGAN2 folder already has downloaded pretrained models (**FFHQ 1024x1024 config-f** and **FFHQ 512x512 config-f**)
     ```
-    python run_generator.py generate_images network=./pretrained_models/...
+    python run_generator.py generate-images --network=pretrained_models/your_pickle_file.pkl --seeds=6600-6625 --truncation-psi=0.5
     ```
