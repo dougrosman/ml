@@ -89,6 +89,7 @@ Guides, tips and resources for machine learning
     ```
 14. I don't know what this does but you should do it.
     ```
+    mkdir bin
     ln -s /usr/bin/ptxas ./bin/
     ```
 15. There's a bug where some of the code in the original stylegan2 repo doesn't work with config-b through f. Open up: `dnnlib/tflib/custom_ops.py` and change line 127 to:
