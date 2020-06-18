@@ -101,7 +101,3 @@ Guides, tips and resources for machine learning
     ```
     python run_generator.py generate-images --network=pretrained_models/your_pickle_file.pkl --seeds=6600-6625 --truncation-psi=0.5
     ```
-
-    cool
-
-    still cool?
